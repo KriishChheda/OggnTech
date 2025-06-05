@@ -4,7 +4,7 @@ import { Star, MapPin, Award, Clock } from 'lucide-react';
 const TutorCard = ({ tutor }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  // Sample reviews data - you can move this to your main data or fetch from API
+  // Sample reviews data
   const sampleReviews = [
     {
       id: 1,
@@ -29,6 +29,7 @@ const TutorCard = ({ tutor }) => {
     }
   ];
 
+  //show rating
   const renderStars = (rating) => {
     const numericRating = typeof rating === 'string' ? parseFloat(rating) : rating;
     return Array.from({ length: 5 }, (_, i) => (
@@ -51,14 +52,14 @@ const TutorCard = ({ tutor }) => {
           isFlipped ? 'rotate-y-180' : ''
         }`}
       >
-        {/* Front Side */}
+        {/* Front Side- tutor info*/}
         <div className="absolute inset-0 bg-[#DCEDF9] rounded-2xl p-6 shadow-lg backface-hidden">
           <div className="flex gap-4 h-full">
             <div className="w-20 h-20 bg-gray-300 rounded-full flex-shrink-0"></div>
             
             <div className="flex-1 flex flex-col">
               <div className='flex justify-between items-start mb-4'>
-                <div className="text-lg font-semibold text-gray-800 text-start">
+                <div className="text-xl font-semibold text-gray-800 text-start rasa-regular">
                   {tutor.name}
                 </div>
                 
@@ -66,7 +67,7 @@ const TutorCard = ({ tutor }) => {
                   {tutor.subjects.map((subject, index) => (
                     <span
                       key={index}
-                      className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium"
+                      className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium inter-regular"
                     >
                       {subject}
                     </span>
@@ -145,7 +146,7 @@ const TutorCard = ({ tutor }) => {
               onClick={() => setIsFlipped(false)}
             >
               Back to Profile
-            </button>
+            </button>   {/*to flip the section */}
           </div>
         </div>
       </div>

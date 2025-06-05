@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import TutorCard from './TutorCard';
 
+
+//filtering based on subject and location
 const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch }) => {
   return (
     <div className="flex gap-2.5 mb-8 bg-[#2367AA] p-4 rounded-4xl">
@@ -35,7 +37,7 @@ const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValu
   );
 };
 
-
+//message if no tutor found
 const NoResults = () => (
   <div className="text-center text-gray-400 mt-10">
     No tutors found matching your criteria.
@@ -48,6 +50,7 @@ const AllTutors = () => {
   const [subjectFilter, setSubjectFilter] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
 
+  //sample tutor data
   const tutors = [
     {
       id: 1,
@@ -96,6 +99,7 @@ const AllTutors = () => {
     }
   ];
 
+  //function to display filtered tutors
    const filteredTutors = tutors.filter(tutor => {
     const matchesSubject = !subjectFilter ||
       tutor.subjects.some(subject =>
@@ -138,6 +142,7 @@ const AllTutors = () => {
             </div>
           </div>
           
+          {/*Tutor cards and info */}
           <div className="flex justify-center">
             <div className="max-w-6xl w-full">
               {filteredTutors.length === 0 ? (
