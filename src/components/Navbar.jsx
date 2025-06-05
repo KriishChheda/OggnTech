@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +33,8 @@ const Navbar = () => {
                     <a href="#" className="block px-4 py-2 hover:bg-gray-200">Request a Tutor</a>
                     <a href="#" className="block px-4 py-2 hover:bg-gray-200">Home Tutor</a>
                     <a href="#" className="block px-4 py-2 hover:bg-gray-200">Online Tutor</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-200">All Tutors</a>
+                    <Link to="/alltutors" className="block px-4 py-2 hover:bg-gray-200">All Tutors</Link>
+
                 </div>
                </div>
 
@@ -80,7 +82,7 @@ const Navbar = () => {
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Request a Tutor</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Home Tutor</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Online Tutor</a>
-            <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">All Tutors</a>
+            <Link to="/alltutors" className="block px-3 py-2 text-white hover:text-blue-400">All Tutors</Link>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">All Tutor Jobs</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Online Tutor Jobs</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Home Tutor Jobs</a>
