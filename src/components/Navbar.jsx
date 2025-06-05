@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import AllTutors from './TutorsPage';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+//  useState here is used to see if the navbar is viewed in mobile view or desktop view
   return (
     <nav className="fixed top-0 w-full bg-black text-white z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,6 +56,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Login Button */}
           <div className="hidden md:block">
             <button className="bg-[#3F88EA] hover:bg-blue-700 px-6 py-2 rounded-lg transition-colors duration-200">
               Log In
@@ -73,6 +74,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/*For mobile responsiveness of the website */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800">
           <div className="px-2 pt-2 pb-3 space-y-1">

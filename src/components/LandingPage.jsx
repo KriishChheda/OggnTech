@@ -28,6 +28,12 @@ const AnimatedCounter = ({ target, duration = 2000, suffix = '+' }) => {
     return () => observer.disconnect();
   }, []);
 
+// there is a class called IntersectionObserver whose object "observer" i am creating. The class has a paramtereized constructor which takes two arguments a call back function and a dictionary.
+
+// using the observe function we r defining which component will be looked for. When the component is visible 50% or more on the view port then the call back function will be triggered. 
+
+// threshold defines what percent of the component should be visible for the call back to be triggered. This is used for the map section .Whenever the map section is visible this will run.
+
   useEffect(() => {
     if (isVisible) {
       const increment = target / (duration / 50);
@@ -74,11 +80,15 @@ const subjects = [
     'Strength of Materials',
     'Thermodynamics'
   ];
+// array of "Top Subjects" i.e. the trending subjects
 
 function LandingPage() {
   return (
     <>
+     {/* This is the first section of the landing page the image */}
       <img src={FrontPage} alt="Front Page" />
+     
+     {/* This is  Static search bar along with the text on top of it , the second section */}
       <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 py-12">
         <div className="text-center mb-16 relative">
         <h1 className="great-vibes-regular text-5xl md:text-6xl font-bold text-white mb-8 leading-tight ">
@@ -99,7 +109,8 @@ function LandingPage() {
           </div>
         </div>
       </div>
-
+ 
+      {/*Third section :- the For Teacher and For Students buttons */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full mt-8">
         <div className="text-center">
           <h3 className="text-3xl font-semibold text-gray-300 mb-8">For Students</h3>
@@ -133,7 +144,7 @@ function LandingPage() {
       </div>
     </div>
 
-
+   {/* The process section and why us? /about us section */}
     <div className="bg-[#2367AA] bg-opacity-71 min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-white text-center mb-16">
@@ -198,11 +209,15 @@ function LandingPage() {
         </div>
       </div>
     </div>
+
+    {/* Map section */}
    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden relative">
   <img src={world} alt="" className="w-1/2 h-1/2 object-contain" />
 
   <div className="absolute top-24 left-24 md:top-20 md:left-45">
-    <AnimatedCounter target={9500} />
+    <AnimatedCounter target={9500} /> 
+     {/*Target contains the value upto which we want to count to */}
+     {/*Every div calls the Animated Counter component defined up, which returns a jsx */}
     <p className="text-white text-xl md:text-2xl font-medium mt-2">Subjects</p>
   </div>
 
@@ -222,6 +237,7 @@ function LandingPage() {
   </div>
 </div>
 
+   {/*top subjects section  */}
     <div className="bg-gray-900 min-h-screen">
       <div className="bg-[#2367AAB5] py-8 ">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center">

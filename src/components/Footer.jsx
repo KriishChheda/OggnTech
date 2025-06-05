@@ -1,5 +1,8 @@
 import React from 'react';
 
+// created 4 divs each containing unordered lists of anchor tags.
+// the 4 unordered lists are for "For Students" ,"For Teachers" , "Company" ,"Support"
+
 const Footer = () => {
   return (
     <footer className="bg-[#2367AA] bg-opacity-71 text-white py-12 px-6">
