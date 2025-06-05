@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AllTutors from './TutorsPage';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,8 +18,8 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8 relative">
-              <a href="#" className="hover:text-blue-400 transition-colors duration-200">Home</a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-200">Assignments</a>
+              <a href="#" className="inter-regular hover:text-blue-400 transition-colors duration-200">Home</a>
+              <a href="#" className="inter-regular hover:text-blue-400 transition-colors duration-200">Assignments</a>
 
               <div className="relative group">
                 <button className="hover:text-blue-400 transition-colors duration-200 flex items-center">
@@ -30,14 +31,12 @@ const Navbar = () => {
 
                 {/* Dropdown stays visible when hovering over dropdown itself */}
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-auto">
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-200">Request a Tutor</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-200">Home Tutor</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-200">Online Tutor</a>
-                    <Link to="/alltutors" className="block px-4 py-2 hover:bg-gray-200">All Tutors</Link>
-
+                    <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Request a Tutor</a>
+                    <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor</a>
+                    <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor</a>
+                    <Link to="/alltutors" className="inter-regular block px-4 py-2 hover:bg-gray-200 hover:underline">All Tutors</Link>
                 </div>
                </div>
-
 
               <div className="relative group">
                 <button className="hover:text-blue-400 transition-colors duration-200 flex items-center">
@@ -47,9 +46,9 @@ const Navbar = () => {
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-auto">
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-200">All Tutor Jobs</a>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-200">Online Tutor Jobs</a>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-200">Home Tutor Jobs</a>
+                  <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">All Tutor Jobs</a>
+                  <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor Jobs</a>
+                  <a href="#" className="inter-regularblock px-4 py-2 hover:bg-gray-200">Home Tutor Jobs</a>
                 </div>
               </div>
 
