@@ -59,7 +59,7 @@ const TutorCard = ({ tutor }) => {
             
             <div className="flex-1 flex flex-col">
               <div className='flex justify-between items-start mb-4'>
-                <div className="text-lg font-semibold text-gray-800 text-start">
+                <div className="text-xl font-semibold text-gray-800 text-start rasa-regular">
                   {tutor.name}
                 </div>
                 
@@ -67,7 +67,7 @@ const TutorCard = ({ tutor }) => {
                   {tutor.subjects.map((subject, index) => (
                     <span
                       key={index}
-                      className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium"
+                      className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium inter-regular"
                     >
                       {subject}
                     </span>
