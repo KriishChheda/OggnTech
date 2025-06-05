@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-12 px-6">
+    <footer className="bg-[#2367AA] bg-opacity-71 text-white py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center justify-center text-center">
           <div>
             <h3 className="text-xl font-semibold mb-4"><u>For Students</u></h3>
             <ul className="space-y-2">
@@ -57,7 +57,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Section */}
           <div>
             <h3 className="text-xl font-semibold mb-4"><u>Company</u></h3>
             <ul className="space-y-2">
@@ -85,24 +84,31 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Support Section */}
-        <div className="border-t border-slate-600 pt-8">
-          <h3 className="text-xl font-semibold mb-4"><u>Support</u></h3>
-          <div className="flex flex-wrap gap-6">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Help Center
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Contact Us
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Feedback
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Terms & Privacy
-            </a>
+        <div className="text-left ml-32">
+            <h3 className="text-xl font-semibold mb-4"><u>Support</u></h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  Help Center
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                  Feedback
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                   Terms & Privacy
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
       </div>
     </footer>
   );

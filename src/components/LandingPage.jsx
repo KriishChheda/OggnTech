@@ -78,15 +78,15 @@ const subjects = [
 function LandingPage() {
   return (
     <>
-    <img src={FrontPage} alt="Front Page" />
-   <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 py-12">
-            <div className="text-center mb-16 relative">
+      <img src={FrontPage} alt="Front Page" />
+      <div className="min-h-screen bg-black flex flex-col items-center justify-center px-6 py-12">
+        <div className="text-center mb-16 relative">
         <h1 className="great-vibes-regular text-5xl md:text-6xl font-bold text-white mb-8 leading-tight ">
-        <b> <i> Get your Perfect Tutor</i></b>
+          <b><i>Get your Perfect Tutor</i></b>
         </h1>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-blue-500 rounded-2xl p-6 shadow-lg">
+          <div className="bg-[#438DF0] rounded-2xl p-6 shadow-lg">
             <div className="flex items-center">
               <Search className="text-white w-8 h-8 ml-4" />
             </div>
@@ -104,13 +104,13 @@ function LandingPage() {
         <div className="text-center">
           <h3 className="text-3xl font-semibold text-gray-300 mb-8">For Students</h3>
           <div className="space-y-4">
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED] font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
               Assignment Help
             </button>
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED] font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
               Study Material
             </button>
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED] font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
               24/7 Support
             </button>
           </div>
@@ -119,13 +119,13 @@ function LandingPage() {
         <div className="text-center">
           <h3 className="text-3xl font-semibold text-gray-300 mb-8">For Teachers</h3>
           <div className="space-y-4">
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600  font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200 ">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED]  font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200 ">
               Teaching Jobs
             </button>
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600  font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED]  font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
               Provide Solutions
             </button>
-            <button className="w-full bg-gray-200 hover:bg-gray-100 text-blue-600 font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
+            <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED] font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200">
               Work Remotely
             </button>
           </div>
@@ -134,7 +134,7 @@ function LandingPage() {
     </div>
 
 
-    <div className="bg-blue-800 min-h-screen py-16 px-6">
+    <div className="bg-[#2367AA] bg-opacity-71 min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-white text-center mb-16">
           The Process
@@ -144,7 +144,7 @@ function LandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
 
           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-[#2367AA] bg-opacity-71 rounded-full flex items-center justify-center mx-auto mb-6">
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">
@@ -153,7 +153,7 @@ function LandingPage() {
           </div>
           
           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-[#2367AA] bg-opacity-71 rounded-full flex items-center justify-center mx-auto mb-6">
               <Lightbulb className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">
@@ -162,7 +162,7 @@ function LandingPage() {
           </div>
           
           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
-            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-[#2367AA] bg-opacity-71 rounded-full flex items-center justify-center mx-auto mb-6">
               <GraduationCap className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-800">
@@ -198,30 +198,32 @@ function LandingPage() {
         </div>
       </div>
     </div>
-    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden relative">
-      <img src={world} alt="" className="w-1/2 h-1/2 object-contain" />
-      <div className="absolute top-16 left-16 md:top-24 md:left-24">
-        <AnimatedCounter target={9500} />
-        <p className="text-white text-xl md:text-2xl font-medium mt-2">Subjects</p>
-      </div>
+   <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden relative">
+  <img src={world} alt="" className="w-1/2 h-1/2 object-contain" />
 
-      <div className="absolute top-16 right-16 md:top-24 md:right-24 text-right">
-        <AnimatedCounter target={900} />
-        <p className="text-white text-xl md:text-2xl font-medium mt-2">Expert Tutors</p>
-      </div>
+  <div className="absolute top-24 left-24 md:top-20 md:left-45">
+    <AnimatedCounter target={9500} />
+    <p className="text-white text-xl md:text-2xl font-medium mt-2">Subjects</p>
+  </div>
 
-      <div className="absolute bottom-16 left-16 md:bottom-24 md:left-24">
-        <AnimatedCounter target={170} />
-        <p className="text-white text-xl md:text-2xl font-medium mt-2">Countries</p>
-      </div>
+  <div className="absolute top-24 right-24 md:top-20 md:right-45 text-right">
+    <AnimatedCounter target={900} />
+    <p className="text-white text-xl md:text-2xl font-medium mt-2">Expert Tutors</p>
+  </div>
 
-      <div className="absolute bottom-16 right-16 md:bottom-24 md:right-24 text-right">
-        <AnimatedCounter target={5700} />
-        <p className="text-white text-xl md:text-2xl font-medium mt-2">Students</p>
-      </div>
-    </div>
+  <div className="absolute bottom-24 left24 md:bottom-20 md:left-45">
+    <AnimatedCounter target={170} />
+    <p className="text-white text-xl md:text-2xl font-medium mt-2">Countries</p>
+  </div>
+
+  <div className="absolute bottom-24 right-24 md:bottom-20 md:right-45 text-right">
+    <AnimatedCounter target={5700} />
+    <p className="text-white text-xl md:text-2xl font-medium mt-2">Students</p>
+  </div>
+</div>
+
     <div className="bg-gray-900 min-h-screen">
-      <div className="bg-blue-700 py-8">
+      <div className="bg-[#2367AAB5] py-8 ">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
           Top Subjects
         </h2>
