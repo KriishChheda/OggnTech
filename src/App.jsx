@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/navbar'
 import LandingPage from './components/LandingPage'
-
+import Footer from './components/Footer'
 function App() {
 
 
@@ -9,6 +9,7 @@ function App() {
     <>
         <Navbar></Navbar>
         <LandingPage></LandingPage>
+        <Footer></Footer>
     </>
   )
 }
