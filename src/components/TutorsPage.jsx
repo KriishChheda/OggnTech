@@ -4,9 +4,10 @@ import TutorCard from './TutorCard';
 
 
 //filtering based on subject and location
-const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch }) => {
+const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch, onAvailabilityChange,availabilityValue }) => {
   return (
-    <div className="flex gap-2.5 mb-8 bg-[#2367AA] p-4 rounded-4xl">
+    <div className="flex flex-col">
+      <div className='flex gap-2.5 mb-5 mt-2 bg-[#2367AA] p-4 rounded-4xl'>
       <input
         type="text"
         placeholder="Subject"
@@ -33,6 +34,30 @@ const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValu
       >
         Clear
       </button>
+      </div>
+       {/* Availability buttons */}
+      <div className="flex justify-center mb-5">
+        <div className='flex gap-1'>
+        <button
+          onClick={() => onAvailabilityChange('')}
+          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === '' ? 'bg-white text-black' : 'text-white '}`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => onAvailabilityChange('Online')}
+          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === 'Online' ? 'bg-white text-black' : 'text-white '}`}
+        >
+          Online
+        </button>
+        <button
+          onClick={() => onAvailabilityChange('Home')}
+          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === 'Home' ? 'bg-white text-black' : 'text-white'}`}
+        >
+          Home
+        </button>
+      </div>
+      </div>
     </div>
   );
 };
@@ -49,6 +74,7 @@ const AllTutors = () => {
   const [locationInput, setLocationInput] = useState('');
   const [subjectFilter, setSubjectFilter] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
+  const [availabilityFilter, setAvailabilityFilter]=useState('');
 
   //sample tutor data
   const tutors = [
@@ -59,7 +85,8 @@ const AllTutors = () => {
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
       experience: "5 yrs",
-      location: "New York"
+      location: "New York",
+      mode: "Online"
     },
     {
       id: 2,
@@ -68,7 +95,8 @@ const AllTutors = () => {
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
       experience: "5 yrs",
-      location: "California"
+      location: "California",
+      mode: "Home"
     },
     {
       id: 3,
@@ -77,7 +105,8 @@ const AllTutors = () => {
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
       experience: "5 yrs",
-      location: "Texas"
+      location: "Texas",
+      mode:"Home"
     },
     {
       id: 4,
@@ -86,7 +115,8 @@ const AllTutors = () => {
       description: "Experienced mathematics tutor with over 8 years of teaching experience. I specialize in making complex mathematical concepts simple and understandable for students of all levels.",
       rating: "4.8/5.0hr",
       experience: "8 yrs",
-      location: "Florida"
+      location: "Florida",
+      mode:"Online"
     },
     {
       id: 5,
@@ -95,21 +125,24 @@ const AllTutors = () => {
       description: "Professional English and Literature tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
       rating: "4.9/5.0hr",
       experience: "6 yrs",
-      location: "India"
+      location: "India",
+      mode:"Home"
     }
   ];
 
   //function to display filtered tutors
-   const filteredTutors = tutors.filter(tutor => {
-    const matchesSubject = !subjectFilter ||
-      tutor.subjects.some(subject =>
-        subject.toLowerCase().includes(subjectFilter.toLowerCase())
-      );
-    const matchesLocation = !locationFilter ||
-      tutor.location.toLowerCase().includes(locationFilter.toLowerCase());
-    return matchesSubject && matchesLocation;
-  });
-  
+  const filteredTutors = tutors.filter(tutor => {
+  const matchesSubject = !subjectFilter ||
+    tutor.subjects.some(subject =>
+      subject.toLowerCase().includes(subjectFilter.toLowerCase())
+    );
+  const matchesLocation = !locationFilter ||
+    tutor.location.toLowerCase().includes(locationFilter.toLowerCase());
+  const matchesAvailability = !availabilityFilter ||
+    tutor.mode === availabilityFilter;
+  return matchesSubject && matchesLocation && matchesAvailability;
+});
+
  const handleSearch = () => {
     setSubjectFilter(subjectInput);
     setLocationFilter(locationInput);
@@ -120,6 +153,7 @@ const AllTutors = () => {
     setLocationInput('');
     setSubjectFilter('');
     setLocationFilter('');
+    setAvailabilityFilter('');
   };
 
 
@@ -138,6 +172,8 @@ const AllTutors = () => {
         onLocationChange={setLocationInput}
         onClear={handleClearFilters}
         onSearch={handleSearch}  
+        onAvailabilityChange={setAvailabilityFilter}
+        availabilityValue={availabilityFilter}
       />
             </div>
           </div>

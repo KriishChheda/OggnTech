@@ -162,7 +162,7 @@ const TutorCard = ({ tutor }) => {
           backface-visibility: hidden;
         }
         .rotate-y-180 {
-          transform: rotateY(180deg);
+          transform: rotateY(-180deg);
         }
       `}</style>
     </div>
