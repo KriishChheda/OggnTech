@@ -32,9 +32,9 @@ const Navbar = () => {
                 {/* Dropdown stays visible when hovering over dropdown itself */}
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-auto">
                     <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Request a Tutor</a>
-                    <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor</a>
-                    <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor</a>
-                    <Link to="/alltutors" className="inter-regular block px-4 py-2 hover:bg-gray-200 hover:underline">All Tutors</Link>
+                    <Link to='/alltutors?mode=Home' className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor</Link>
+                    <Link to="/alltutors?mode=Online" className='inter-regular block px-4 py-2 hover:bg-gray-200'>Online Tutor</Link>
+                    <Link to="/alltutors?mode=All" className="inter-regular block px-4 py-2 hover:bg-gray-200 hover:underline">All Tutors</Link>
                 </div>
                </div>
 
@@ -46,9 +46,10 @@ const Navbar = () => {
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-auto">
-                  <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">All Tutor Jobs</a>
-                  <a href="#" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor Jobs</a>
-                  <a href="#" className="inter-regularblock px-4 py-2 hover:bg-gray-200">Home Tutor Jobs</a>
+                  <Link to="/alljobs?type=All" className="inter-regular block px-4 py-2 hover:bg-gray-200">All Tutor Jobs</Link>
+<Link to="/alljobs?type=Online" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor Jobs</Link>
+<Link to="/alljobs?type=Home" className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor Jobs</Link>
+
                 </div>
               </div>
 
@@ -81,9 +82,9 @@ const Navbar = () => {
             <Link to="/landingpage" className="block px-3 py-2 text-white hover:text-blue-400">Home</Link>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Assignments</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Request a Tutor</a>
-            <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Home Tutor</a>
-            <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Online Tutor</a>
-            <Link to="/alltutors" className="block px-3 py-2 text-white hover:text-blue-400">All Tutors</Link>
+            <Link to='/alltutors?mode=Home' className="block px-3 py-2 text-white hover:text-blue-400">Home Tutor</Link>
+             <Link to="/alltutors?mode=Online" className='block px-3 py-2 text-white hover:text-blue-400'>Online Tutor</Link>
+            <Link to="/alltutors?mode=All" className="block px-3 py-2 text-white hover:text-blue-400">All Tutors</Link>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">All Tutor Jobs</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Online Tutor Jobs</a>
             <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Home Tutor Jobs</a>

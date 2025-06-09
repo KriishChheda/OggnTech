@@ -1,83 +1,78 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import TutorCard from './TutorCard';
 
-
-//filtering based on subject and location
-const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch, onAvailabilityChange,availabilityValue }) => {
+// Filter component
+const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch, onAvailabilityChange, availabilityValue }) => {
   return (
     <div className="flex flex-col">
       <div className='flex gap-2.5 mb-5 mt-2 bg-[#2367AA] p-4 rounded-4xl'>
-      <input
-        type="text"
-        placeholder="Subject"
-        value={subjectValue}
-        onChange={(e) => onSubjectChange(e.target.value)}
-        className="flex-1 px-3 rounded-full ml-2 bg-white text-black placeholder-black border-none outline-none text-sm"
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={locationValue}
-        onChange={(e) => onLocationChange(e.target.value)}
-        className="flex-1 px-3 rounded-full bg-white text-black placeholder-black border-none outline-none text-sm"
-      />
-      <button
-        onClick={onSearch} 
-        className="w-12 h-12 flex items-center justify-center text-white"
-      >
-        <Search size={18} />
-      </button>
-      <button
-        onClick={onClear}
-        className="text-white px-4 py-2 text-sm font-medium"
-      >
-        Clear
-      </button>
+        <input
+          type="text"
+          placeholder="Subject"
+          value={subjectValue}
+          onChange={(e) => onSubjectChange(e.target.value)}
+          className="flex-1 px-3 rounded-full ml-2 bg-white text-black placeholder-black border-none outline-none text-sm"
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          value={locationValue}
+          onChange={(e) => onLocationChange(e.target.value)}
+          className="flex-1 px-3 rounded-full bg-white text-black placeholder-black border-none outline-none text-sm"
+        />
+        <button onClick={onSearch} className="w-12 h-12 flex items-center justify-center text-white">
+          <Search size={18} />
+        </button>
+        <button onClick={onClear} className="text-white px-4 py-2 text-sm font-medium">Clear</button>
       </div>
-       {/* Availability buttons */}
+
       <div className="flex justify-center mb-5">
         <div className='flex gap-1'>
-        <button
-          onClick={() => onAvailabilityChange('')}
-          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === '' ? 'bg-white text-black' : 'text-white '}`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => onAvailabilityChange('Online')}
-          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === 'Online' ? 'bg-white text-black' : 'text-white '}`}
-        >
-          Online
-        </button>
-        <button
-          onClick={() => onAvailabilityChange('Home')}
-          className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === 'Home' ? 'bg-white text-black' : 'text-white'}`}
-        >
-          Home
-        </button>
-      </div>
+          {['', 'Online', 'Home'].map(mode => (
+            <button
+              key={mode}
+              onClick={() => onAvailabilityChange(mode)}
+              className={`px-2 py-2 rounded-full hover:underline text-sm font-medium ${availabilityValue === mode ? 'bg-white text-black' : 'text-white'}`}
+            >
+              {mode || 'All'}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-//message if no tutor found
+// No results message
 const NoResults = () => (
   <div className="text-center text-gray-400 mt-10">
     No tutors found matching your criteria.
   </div>
 );
 
+// Main Tutors page component
 const AllTutors = () => {
+  const location = useLocation();
+
   const [subjectInput, setSubjectInput] = useState('');
   const [locationInput, setLocationInput] = useState('');
   const [subjectFilter, setSubjectFilter] = useState('');
   const [locationFilter, setLocationFilter] = useState('');
-  const [availabilityFilter, setAvailabilityFilter]=useState('');
+  const [availabilityFilter, setAvailabilityFilter] = useState('');
 
-  //sample tutor data
-  const tutors = [
+  // Load availability from query params on page load
+ useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const mode = params.get('mode');
+  if (mode && mode !== 'All') {
+    setAvailabilityFilter(mode);
+  } else {
+    setAvailabilityFilter('');
+  }
+}, [location.search]);
+ const tutors = [
     {
       id: 1,
       name: "Name",
@@ -130,20 +125,15 @@ const AllTutors = () => {
     }
   ];
 
-  //function to display filtered tutors
+  // Filter tutors by selected filters
   const filteredTutors = tutors.filter(tutor => {
-  const matchesSubject = !subjectFilter ||
-    tutor.subjects.some(subject =>
-      subject.toLowerCase().includes(subjectFilter.toLowerCase())
-    );
-  const matchesLocation = !locationFilter ||
-    tutor.location.toLowerCase().includes(locationFilter.toLowerCase());
-  const matchesAvailability = !availabilityFilter ||
-    tutor.mode === availabilityFilter;
-  return matchesSubject && matchesLocation && matchesAvailability;
-});
+    const matchesSubject = !subjectFilter || tutor.subjects.some(subject => subject.toLowerCase().includes(subjectFilter.toLowerCase()));
+    const matchesLocation = !locationFilter || tutor.location.toLowerCase().includes(locationFilter.toLowerCase());
+    const matchesAvailability = !availabilityFilter || tutor.mode === availabilityFilter;
+    return matchesSubject && matchesLocation && matchesAvailability;
+  });
 
- const handleSearch = () => {
+  const handleSearch = () => {
     setSubjectFilter(subjectInput);
     setLocationFilter(locationInput);
   };
@@ -156,29 +146,27 @@ const AllTutors = () => {
     setAvailabilityFilter('');
   };
 
-
- return (
+  return (
     <div className="min-h-screen bg-gray-800 text-white px-8 py-6">
       <div className="w-full">
         <div className="text-center mb-10">
           <h1 className="text-3xl font-medium mb-8">All Tutors</h1>
-          
+
           <div className="flex justify-center mb-8">
             <div className="max-w-4xl w-full">
-               <SearchFilters
-        subjectValue={subjectInput}
-        locationValue={locationInput}
-        onSubjectChange={setSubjectInput}
-        onLocationChange={setLocationInput}
-        onClear={handleClearFilters}
-        onSearch={handleSearch}  
-        onAvailabilityChange={setAvailabilityFilter}
-        availabilityValue={availabilityFilter}
-      />
+              <SearchFilters
+                subjectValue={subjectInput}
+                locationValue={locationInput}
+                onSubjectChange={setSubjectInput}
+                onLocationChange={setLocationInput}
+                onClear={handleClearFilters}
+                onSearch={handleSearch}
+                onAvailabilityChange={setAvailabilityFilter}
+                availabilityValue={availabilityFilter}
+              />
             </div>
           </div>
-          
-          {/*Tutor cards and info */}
+
           <div className="flex justify-center">
             <div className="max-w-6xl w-full">
               {filteredTutors.length === 0 ? (
@@ -192,11 +180,15 @@ const AllTutors = () => {
               )}
             </div>
           </div>
+
         </div>
       </div>
     </div>
   );
 };
 
-
 export default AllTutors;
+
+
+
+
