@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center justify-center text-center">
           <div>
-            <h3 className="text-xl font-semibold mb-4"><u>For Students</u></h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>For Students</u></h3>
+            <ul className="space-y-2 inter-regular">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
                   Find Tutors
@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4"><u>For Teachers</u></h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>For Teachers</u></h3>
+            <ul className="space-y-2 inter-regular">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
                   Become a Tutor
@@ -61,8 +61,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4"><u>Company</u></h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>Company</u></h3>
+            <ul className="space-y-2 inter-regular">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
                   About Us
@@ -88,8 +88,8 @@ const Footer = () => {
         </div>
 
         <div className="text-left ml-32">
-            <h3 className="text-xl font-semibold mb-4"><u>Support</u></h3>
-            <ul className="space-y-2">
+            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>Support</u></h3>
+            <ul className="space-y-2 inter-regular">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
                   Help Center

@@ -23,7 +23,7 @@ const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValu
         className="flex-1 px-3 rounded-full bg-white text-black placeholder-black border-none outline-none text-sm"
       />
       <button
-        onClick={onSearch}  // Trigger search on button click
+        onClick={onSearch} 
         className="w-12 h-12 flex items-center justify-center text-white"
       >
         <Search size={18} />
