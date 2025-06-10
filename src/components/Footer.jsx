@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">For Students</h3>
             <ul className="space-y-2 text-sm sm:text-base font-normal">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Find Tutors</a></li>
+              <li><Link to="/alltutors?mode=All" className="text-gray-300 hover:text-white transition-colors">Find Tutors</Link></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Online Learning</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Assignment Help</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Test Preparation</a></li>
@@ -21,8 +22,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">For Teachers</h3>
             <ul className="space-y-2 text-sm sm:text-base font-normal">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Become a Tutor</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Teaching Jobs</a></li>
+              <li><Link to="/alljobs?type=All" className="text-gray-300 hover:text-white transition-colors">Become a Tutor</Link></li>
+              <li> <Link to="/alljobs?type=All" className="text-gray-300 hover:text-white transition-colors">Teaching Jobs</Link></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Premium Membership</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Teacher Resources</a></li>
             </ul>
