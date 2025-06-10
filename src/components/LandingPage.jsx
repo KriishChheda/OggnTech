@@ -53,13 +53,19 @@ const AnimatedCounter = ({ target, duration = 2000, suffix = '+' }) => {
   }, [isVisible, target, duration]);
 
   return (
-    <div ref={counterRef} className="text-center">
-      <div className="text-5xl md:text-6xl font-bold">
-        <span className="text-white">{Math.floor(count / 1000)}</span>
-        <span className="text-blue-400">{String(Math.floor(count % 1000)).padStart(3, '0')}</span>
-        <span className="text-blue-500">{suffix}</span>
-      </div>
-    </div>
+    <div ref={counterRef} className="text-center py-8">
+  <div
+    className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent"
+    style={{
+      backgroundImage: 'linear-gradient(90deg, #FFFFFF 4.75%, #2367AA 58.12%)',
+    }}
+  >
+    <span>{Math.floor(count / 1000)}</span>
+    <span>{String(Math.floor(count % 1000)).padStart(3, '0')}</span>
+    <span>{suffix}</span>
+  </div>
+</div>
+
   );
 };
 
@@ -103,8 +109,8 @@ function LandingPage() {
           </div>
           
           <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-10">
-            <h2 className="poetsen-one-regular text-4xl md:text-5xl font-bold text-white whitespace-nowrap ">
-              <b><i>with ONE Click</i></b>
+            <h2 className="poetsen-one-regular text-4xl md:text-6xl font-bold text-white whitespace-nowrap ">
+              <b><i>With ONE Click</i></b>
             </h2>
           </div>
         </div>
@@ -113,7 +119,7 @@ function LandingPage() {
       {/*Third section :- the For Teacher and For Students buttons */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full mt-8">
         <div className="text-center">
-          <h3 className="text-3xl font-semibold text-gray-300 mb-8">For Students</h3>
+          <h3 className="text-4xl font-semibold text-gray-300 mb-8">For Students</h3>
           <div className="space-y-4">
             <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED] font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200 rasa-regular">
               Assignment Help
@@ -128,7 +134,7 @@ function LandingPage() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-3xl font-semibold text-gray-300 mb-8">For Teachers</h3>
+          <h3 className="text-4xl font-semibold text-gray-300 mb-8">For Teachers</h3>
           <div className="space-y-4">
             <button className="w-full bg-gray-200 hover:bg-gray-100 text-[#063EE6ED]  font-semibold py-4 px-8 rounded-xl text-xl transition-colors duration-200 rasa-regular">
               Teaching Jobs
@@ -147,11 +153,9 @@ function LandingPage() {
    {/* The process section and why us? /about us section */}
     <div className="bg-[#2367AA] bg-opacity-71 min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold text-white text-center mb-16 inter-regular">
+        <h2 className="text-4xl font-bold text-white text-center mb-16 inter-regular">
           The Process
         </h2>
-        
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
 
           <div className="bg-white rounded-2xl p-8 text-center shadow-lg">
@@ -183,13 +187,13 @@ function LandingPage() {
         </div>
         
         <div>
-          <h2 className="text-5xl font-bold text-white text-center mb-16 inter-regular">
+          <h2 className="text-4xl font-bold text-white text-center mb-16 inter-regular">
             Why Us?
           </h2>
           
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="bg-white rounded-2xl p-8 text-center shadow-lg inter-regular">
-              <h3 className="text-2xl font-semibold text-gray-800">
+              <h3 className="text-2xl font-semibold text-gray-800 ">
                 Access to Qualified Teachers
               </h3>
             </div>
@@ -252,7 +256,7 @@ function LandingPage() {
               <div key={index} className="flex items-center justify-center">
                 <a
                   href={`#${subject.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  className="text-white text-2xl md:text-3xl font-medium hover:text-blue-400 transition-colors duration-200 cursor-pointer rasa-regular"
+                  className="text-white text-2xl md:text-2xl font-medium hover:text-blue-400 transition-colors duration-200 cursor-pointer rasa-regular"
                 >
                   {subject}
                 </a>

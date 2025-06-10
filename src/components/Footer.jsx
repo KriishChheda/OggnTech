@@ -1,117 +1,55 @@
 import React from 'react';
 
-// created 4 divs each containing unordered lists of anchor tags.
-// the 4 unordered lists are for "For Students" ,"For Teachers" , "Company" ,"Support"
-
 const Footer = () => {
   return (
-    <footer className="bg-[#2367AA] text-white py-12 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center justify-center text-center">
+    <footer className="bg-[#2367AA] text-white py-10 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center sm:text-left ml-28">
+          
+          {/* For Students */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>For Students</u></h3>
-            <ul className="space-y-2 inter-regular">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Find Tutors
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Online Learning
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Assignment Help
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Test Preparation
-                </a>
-              </li>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">For Students</h3>
+            <ul className="space-y-2 text-sm sm:text-base font-normal">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Find Tutors</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Online Learning</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Assignment Help</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Test Preparation</a></li>
             </ul>
           </div>
 
+          {/* For Teachers */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>For Teachers</u></h3>
-            <ul className="space-y-2 inter-regular">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Become a Tutor
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Teaching Jobs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Premium Membership
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Teacher Resources
-                </a>
-              </li>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">For Teachers</h3>
+            <ul className="space-y-2 text-sm sm:text-base font-normal">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Become a Tutor</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Teaching Jobs</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Premium Membership</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Teacher Resources</a></li>
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>Company</u></h3>
-            <ul className="space-y-2 inter-regular">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  How It Works
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Safety
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Testimonials
-                </a>
-              </li>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">Company</h3>
+            <ul className="space-y-2 text-sm sm:text-base font-normal">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Safety</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">Support</h3>
+            <ul className="space-y-2 text-sm sm:text-base font-normal">
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Feedback</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms & Privacy</a></li>
             </ul>
           </div>
         </div>
-
-        <div className="text-left ml-32">
-            <h3 className="text-xl font-semibold mb-4 inter-regular"><u>Support</u></h3>
-            <ul className="space-y-2 inter-regular">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Feedback
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                   Terms & Privacy
-                </a>
-              </li>
-            </ul>
-          </div>
       </div>
     </footer>
   );
