@@ -66,13 +66,14 @@ export default function ContactUsPage() {
 
   // ContactMethods is an array of objects. Each object is one method of contacting the organisation.
   const stats = [
-    { icon: Users, number: '10K+', label: 'Happy Students' },
-    { icon: Award, number: '500+', label: 'Expert Tutors' },
+    { icon: Users, number: '5700+', label: 'Happy Students' },
+    { icon: Award, number: '900+', label: 'Expert Tutors' },
     { icon: Clock, number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+
       {/* Header Section */}
       <section id="headerSection">
       <div className="relative overflow-hidden bg-gradient-to-r from-black via-blue-800 to-blue-600 text-white">
@@ -95,6 +96,7 @@ export default function ContactUsPage() {
         </div>
       </div>
     </section>
+
       {/* Stats Section */}
       <section id="stats">
       <div className="py-16 bg-white/50 backdrop-blur-sm">
@@ -112,7 +114,7 @@ export default function ContactUsPage() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -198,7 +200,7 @@ export default function ContactUsPage() {
                 </p>
               </div>
             ) : (
-              <div className="space-y-6">
+              <div className="space-y-6"> 
                 {/* User Type Selection */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
