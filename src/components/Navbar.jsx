@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Search, Menu, X, Mail, Lock, User, Phone, MapPin, DollarSign, BookOpen, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AllTutors from './TutorsPage';
+import ReviewsPage from './ReviewsPage';
 
 const AuthModal = ({ 
   isOpen, 
@@ -572,7 +573,7 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                <a href="#" className="hover:text-blue-400 transition-colors duration-200">Reviews</a>
+              <Link to='/reviewspage' className="hover:text-blue-400 transition-colors duration-200">Reviews</Link>
               </div>
             </div>
 
@@ -610,7 +611,7 @@ const Navbar = () => {
               <Link to="/alljobs?type=All" className="inter-regular block px-4 py-2 hover:bg-gray-200">All Tutor Jobs</Link>
               <Link to="/alljobs?type=Online" className="inter-regular block px-4 py-2 hover:bg-gray-200">Online Tutor Jobs</Link>
               <Link to="/alljobs?type=Home" className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor Jobs</Link>
-              <a href="#" className="block px-3 py-2 text-white hover:text-blue-400">Reviews</a>
+             <Link to="/reviewspage" className="block px-3 py-2 text-white hover:text-blue-400">Reviews</Link>
               <button 
                 onClick={() => openAuthModal()}
                 className="w-full mt-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-left"
