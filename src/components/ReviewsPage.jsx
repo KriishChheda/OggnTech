@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
+import {Link} from 'react-router-dom'
 
 const reviews = [
   {
@@ -100,9 +101,9 @@ const ReviewsPage = () => {
               <button className="bg-white text-blue-600 font-bold text-lg px-10 py-4 rounded-2xl shadow-lg transition hover:scale-105">
                 Get Started Today
               </button>
-              <button className="border-2 border-white/30 text-white font-semibold text-lg px-10 py-4 rounded-2xl backdrop-blur-sm hover:bg-white/10">
+              <Link to="/alljobs?type=All" className="border-2 border-white/30 text-white font-semibold text-lg px-10 py-4 rounded-2xl backdrop-blur-sm hover:bg-white/10">
                 Browse Tutors
-              </button>
+              </Link>
             </div>
           </div>
         </div>
