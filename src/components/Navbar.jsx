@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AllTutors from './TutorsPage';
 import ReviewsPage from './ReviewsPage';
 import AuthModal from './AuthModal';
+import RequestTutorPage from './RequestTutor';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,7 +113,7 @@ const Navbar = () => {
                   </button>
 
                   <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pointer-events-auto">
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-200">Request a Tutor</a>
+                    <Link to='/requestTutor' className="block px-4 py-2 hover:bg-gray-200">Request a Tutor</Link>
                     <Link to='/alltutors?mode=Home' className="inter-regular block px-4 py-2 hover:bg-gray-200">Home Tutor</Link>
                     <Link to="/alltutors?mode=Online" className='inter-regular block px-4 py-2 hover:bg-gray-200'>Online Tutor</Link>
                     <Link to="/alltutors?mode=All" className="inter-regular block px-4 py-2 hover:bg-gray-200 hover:underline">All Tutors</Link>

@@ -10,6 +10,7 @@ import ReviewsPage from './components/ReviewsPage'
 import AuthModal from './components/AuthModal'
 import ScrollToHash from './components/ScrollToHash'
 import TermsAndPrivacy from './components/TermsAndPrivacy'
+import RequestTutorPage from './components/RequestTutor'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contact-us' element={<ContactUsPage />}/>
           <Route path='/reviewspage' element={<ReviewsPage />}/>
           <Route path='/T&C' element={<TermsAndPrivacy />}/>
+          <Route path="/requestTutor" element={<RequestTutorPage />} />
         </Routes>
         <Footer />
       </Router>
