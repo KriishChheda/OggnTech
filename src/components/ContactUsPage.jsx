@@ -38,22 +38,22 @@ export default function ContactUsPage() {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a message anytime',
-      contact: 'hello@tutorconnect.com',
-      action: 'mailto:hello@tutorconnect.com'
+      contact: 'oggntech@gmail.com',
+      action: 'mailto:oggntech@gmail.com'
     },
     {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak with our support team',
-      contact: '+1 (555) 123-4567',
-      action: 'tel:+15551234567'
+      contact: '+91 7039922863',
+      action: ''
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Get instant help online',
       contact: 'Available 24/7',
-      action: '#'
+      action: 'https://wa.me/9167160832'
     },
     {
       icon: MapPin,
@@ -76,7 +76,7 @@ export default function ContactUsPage() {
 
       {/* Header Section */}
       <section id="headerSection">
-      <div className="relative overflow-hidden bg-gradient-to-r from-black via-blue-800 to-blue-600 text-white">
+      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -104,7 +104,7 @@ export default function ContactUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16  bg-gradient-to-r from-black via-blue-800 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-gray-800 mb-2">{stat.number}</div>
@@ -141,7 +141,7 @@ export default function ContactUsPage() {
                   className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className=" bg-gradient-to-r from-black via-blue-800 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <div className=" bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 p-3 rounded-xl group-hover:scale-110 transition-transform duration-300">
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -160,12 +160,12 @@ export default function ContactUsPage() {
             {/* Additional Info */}
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-blue-100">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                🕐 Support Hours
+                Support Hours
               </h3>
               <div className="space-y-2 text-gray-700">
-                <p><span className="font-medium">Monday - Friday:</span> 8:00 AM - 10:00 PM</p>
-                <p><span className="font-medium">Saturday:</span> 9:00 AM - 8:00 PM</p>
-                <p><span className="font-medium">Sunday:</span> 10:00 AM - 6:00 PM</p>
+                <p><span className="font-medium">Monday - Friday</span>: 8:00 AM - 10:00 PM</p>
+                <p><span className="font-medium mr-14">Saturday</span>: 9:00 AM - 8:00 PM</p>
+                <p><span className="font-medium mr-16">Sunday</span>: 10:00 AM - 6:00 PM</p>
               </div>
               <div className="mt-4 p-4 bg-white/60 rounded-lg">
                 <p className="text-sm text-gray-600">
@@ -177,6 +177,7 @@ export default function ContactUsPage() {
           </div>
 
           {/* Contact Form */}
+          <section id="feedbackForm">
           <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -260,7 +261,6 @@ export default function ContactUsPage() {
                     />
                   </div>
 
-
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
@@ -277,7 +277,6 @@ export default function ContactUsPage() {
                     />
                   </div>
                 </div>
-
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
@@ -301,7 +300,6 @@ export default function ContactUsPage() {
                   </select>
                 </div>
 
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -320,7 +318,7 @@ export default function ContactUsPage() {
 
                 <button
                   onClick={handleSubmit}
-                  className="w-full  bg-gradient-to-r from-black via-blue-800 to-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  className="w-full  bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                 >
                   <Send className="w-5 h-5" />
                   <span>Send Message</span>
@@ -328,9 +326,11 @@ export default function ContactUsPage() {
                 </div>
             )}
           </div>
+          </section>
         </div>
       </div>
 
+      <section id="FAQ">
       <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -362,6 +362,7 @@ export default function ContactUsPage() {
           </div>
         </div>
       </div>
+      </section> 
     </div>
   );
 }

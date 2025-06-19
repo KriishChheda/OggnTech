@@ -8,6 +8,8 @@ import AllJobs from './components/JobsPage'
 import ContactUsPage from './components/ContactUsPage'
 import ReviewsPage from './components/ReviewsPage'
 import AuthModal from './components/AuthModal'
+import ScrollToHash from './components/ScrollToHash'
+import TermsAndPrivacy from './components/TermsAndPrivacy'
 
 function App() {
 
@@ -15,12 +17,14 @@ function App() {
     <>
       <Router>
         <Navbar></Navbar>
+        <ScrollToHash/>
         <Routes>
           <Route path="/landingpage" element={<LandingPage/>}/>
           <Route path="/alltutors" element={<AllTutors />}/>
           <Route path='/alljobs' element={<AllJobs />}/>
           <Route path='/contact-us' element={<ContactUsPage />}/>
           <Route path='/reviewspage' element={<ReviewsPage />}/>
+          <Route path='/T&C' element={<TermsAndPrivacy />}/>
         </Routes>
         <Footer />
       </Router>

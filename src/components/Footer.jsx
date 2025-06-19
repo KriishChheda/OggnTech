@@ -34,7 +34,7 @@ const Footer = () => {
             <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">Company</h3>
             <ul className="space-y-2 text-sm sm:text-base font-normal">
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">How It Works</a></li>
+              <Link to='/LandingPage#WhyUs' className="text-gray-300 hover:text-white transition-colors block">How it works</Link>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Safety</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
             </ul>
@@ -44,10 +44,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg sm:text-xl font-semibold mb-4 underline">Support</h3>
             <ul className="space-y-2 text-sm sm:text-base font-normal">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Help Center</a></li>
-              <Link to='/contact-us' className="text-gray-300 hover:text-white transition-colors">Contact us</Link>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Feedback</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms & Privacy</a></li>
+              <Link to='/contact-us' className="text-gray-300 hover:text-white transition-colors block">Contact us</Link>
+              <Link to='/contact-us#feedbackForm' className="text-gray-300 hover:text-white transition-colors block">Feedback & Queries</Link>
+              <li><a href="/contact-us#FAQ" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+              <Link to='/T&C' className="text-gray-300 hover:text-white transition-colors block">Terms & Conditions</Link>
             </ul>
           </div>
         </div>

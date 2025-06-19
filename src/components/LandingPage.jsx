@@ -151,6 +151,7 @@ function LandingPage() {
     </div>
 
    {/* The process section and why us? /about us section */}
+   <section id="WhyUs">
     <div className="bg-[#2367AA] bg-opacity-71 min-h-screen py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-white text-center mb-8 inter-regular">
@@ -213,7 +214,7 @@ function LandingPage() {
         </div>
       </div>
     </div>
-
+    </section>
     {/* Map section */}
    <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden relative">
   <img src={world} alt="" className="w-1/2 h-1/2 object-contain" />
