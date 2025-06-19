@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import TutorCard from './TutorCard';
+import Profile1 from '../assets/profile1.png';
+import Profile2 from '../assets/profile2.png';
+import Profile3 from '../assets/profile3.png';
 
 // Filter component
 const SearchFilters = ({ onSubjectChange, onLocationChange, onClear, subjectValue, locationValue, onSearch, onAvailabilityChange, availabilityValue }) => {
@@ -76,6 +79,7 @@ const AllTutors = () => {
     {
       id: 1,
       name: "Name",
+      image: Profile3,
       subjects: ["Science", "Physics", "English"],
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
@@ -86,6 +90,7 @@ const AllTutors = () => {
     {
       id: 2,
       name: "Name",
+      image: Profile2,
       subjects: ["Science", "Physics", "English"],
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
@@ -96,6 +101,7 @@ const AllTutors = () => {
     {
       id: 3,
       name: "Name",
+      image: Profile3,
       subjects: ["Science", "Physics", "English"],
       description: "I am deeply passionate about teaching and committed to elevating the standards of physiotherapy education. I believe that the foundational concepts in the first year, though often overlooked, are crucial for building strong clinical reasoning skills. My goal is to ensure students develop a clear and thorough understanding of the basics, so that by...",
       rating: "5.0/5.0hr",
@@ -106,6 +112,7 @@ const AllTutors = () => {
     {
       id: 4,
       name: "Name",
+      image: Profile2,
       subjects: ["Mathematics", "Calculus"],
       description: "Experienced mathematics tutor with over 8 years of teaching experience. I specialize in making complex mathematical concepts simple and understandable for students of all levels.",
       rating: "4.8/5.0hr",
@@ -116,13 +123,69 @@ const AllTutors = () => {
     {
       id: 5,
       name: "Name",
+      image: Profile3,
       subjects: ["English", "Literature"],
       description: "Professional English and Literature tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
       rating: "4.9/5.0hr",
       experience: "6 yrs",
       location: "India",
       mode:"Home"
-    }
+    },
+    {
+      id: 5,
+      name: "Name",
+      image: Profile2,
+      subjects: ["English", "Literature"],
+      description: "Professional English and Literature tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
+      rating: "4.9/5.0hr",
+      experience: "6 yrs",
+      location: "India",
+      mode:"Home"
+    },
+    {
+      id: 5,
+      name: "Name",
+      image: Profile3,
+      subjects: ["English", "Mathematics"],
+      description: "Professional English and Mathematics tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
+      rating: "4.9/5.0hr",
+      experience: "6 yrs",
+      location: "Texas",
+      mode:"Online"
+    },
+    {
+      id: 5,
+      name: "Name",
+      image: Profile2,
+      subjects: ["English", "Literature"],
+      description: "Professional English and Literature tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
+      rating: "4.9/5.0hr",
+      experience: "6 yrs",
+      location: "India",
+      mode:"Home"
+    },
+    {
+      id: 5,
+      name: "Name",
+      image: Profile3,
+      subjects: ["English", "Programming"],
+      description: "Professional English and Programming tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
+      rating: "4.9/5.0hr",
+      experience: "6 yrs",
+      location: "Florida ",
+      mode:"Online"
+    },
+    {
+      id: 5,
+      name: "Name",
+      image: Profile2,
+      subjects: ["English", "Literature"],
+      description: "Professional English and Literature tutor helping students improve their writing, reading comprehension, and critical thinking skills through engaging and personalized lessons.",
+      rating: "4.9/5.0hr",
+      experience: "6 yrs",
+      location: "India",
+      mode:"Home"
+    },
   ];
 
   // Filter tutors by selected filters

@@ -53,27 +53,35 @@ const TutorCard = ({ tutor }) => {
         }`}
       >
         {/* Front Side- tutor info*/}
-        <div className="absolute inset-0 bg-[#DCEDF9] rounded-2xl p-6 shadow-lg backface-hidden">
-          <div className="flex gap-4 h-full">
-            <div className="w-20 h-20 bg-gray-300 rounded-full flex-shrink-0"></div>
-            
-            <div className="flex-1 flex flex-col">
-              <div className='flex justify-between items-start mb-4'>
-                <div className="text-xl font-semibold text-gray-800 text-start rasa-regular">
-                  {tutor.name}
-                </div>
-                
-                <div className="flex flex-wrap gap-2 justify-end">
-                  {tutor.subjects.map((subject, index) => (
-                    <span
-                      key={index}
-                      className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium inter-regular"
-                    >
-                      {subject}
-                    </span>
-                  ))}
-                </div>
-              </div>
+      <div className="absolute inset-0 bg-[#DCEDF9] rounded-2xl p-6 shadow-lg backface-hidden">
+  <div className="flex gap-4 h-full">
+    {/* Profile Image */}
+    <div className="w-20 h-20 bg-gray-300 rounded-full flex-shrink-0 overflow-hidden">
+      <img 
+        src={tutor.image} 
+        alt={tutor.name} 
+        className="w-full h-full object-cover"
+      />
+    </div>
+
+    {/* Tutor Details */}
+    <div className="flex-1 flex flex-col">
+      <div className='flex justify-between items-start mb-4'>
+        <div className="text-xl font-semibold text-gray-800 text-start rasa-regular">
+          {tutor.name}
+        </div>
+
+        <div className="flex flex-wrap gap-2 justify-end">
+          {tutor.subjects.map((subject, index) => (
+            <span
+              key={index}
+              className="bg-blue-500 text-white px-3 py-1.5 rounded-full text-xs font-medium inter-regular"
+            >
+              {subject}
+            </span>
+          ))}
+        </div>
+      </div>
               
               <p className="text-gray-600 text-sm text-start mb-4 flex-1">
                 {tutor.description}
