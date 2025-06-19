@@ -7,9 +7,9 @@ import Footer from './components/Footer'
 import AllJobs from './components/JobsPage'
 import ContactUsPage from './components/ContactUsPage'
 import ReviewsPage from './components/ReviewsPage'
+import AuthModal from './components/AuthModal'
 
 function App() {
-
 
   return (
     <>
