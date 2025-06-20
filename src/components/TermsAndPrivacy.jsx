@@ -41,7 +41,7 @@ const TermsAndPrivacy = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-black text-white">
+      <div className="bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 text-white">
         <div className="max-w-6xl mx-auto px-4 pt-20 mt-3 mb-3 pb-6">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Company Name</h1>
