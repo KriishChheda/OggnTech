@@ -1,3 +1,5 @@
+//Kriish
+import axios from 'axios'; 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Send, Clock, Users, Award } from 'lucide-react';
 
@@ -18,20 +20,42 @@ export default function ContactUsPage() {
     });
   };
 
-  const handleSubmit = () => {
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        userType: 'student'
-      });
-    }, 3000);
-  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault(); // prevent page refresh
+
+  try {
+    const response = await axios.post('http://localhost:5000/api/contact', {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (response.status === 200) {
+      console.log("Submitted the message correctly");
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          userType: 'student'
+        });
+      }, 3000);
+    } else {
+      console.error('Failed to send message');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
 
   const contactMethods = [
     {
@@ -202,6 +226,7 @@ export default function ContactUsPage() {
               </div>
             ) : (
               <div className="space-y-6"> 
+              <form onSubmit={handleSubmit}>
                 {/* User Type Selection */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
@@ -316,13 +341,14 @@ export default function ContactUsPage() {
                   />
                 </div>
 
-                <button
-                  onClick={handleSubmit}
-                  className="w-full  bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
-                </button>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-br from-indigo-800 via-blue-800 to-blue-400 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 focus:ring-4 focus:ring-blue-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  >
+                    <Send className="w-5 h-5" />
+                    <span>Send Message</span>
+                  </button>
+                </form>
                 </div>
             )}
           </div>

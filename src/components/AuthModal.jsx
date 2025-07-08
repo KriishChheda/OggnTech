@@ -1,3 +1,5 @@
+// Kriish
+
 import React from 'react';
 import { X, Mail, Lock, User, Phone, MapPin, BookOpen, DollarSign, Award } from 'lucide-react';
 

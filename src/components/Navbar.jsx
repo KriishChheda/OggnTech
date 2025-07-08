@@ -1,3 +1,5 @@
+// Kriish + Meghana
+
 import React, { useState, useCallback } from 'react';
 import { Search, Menu, X, Mail, Lock, User, Phone, MapPin, DollarSign, BookOpen, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';

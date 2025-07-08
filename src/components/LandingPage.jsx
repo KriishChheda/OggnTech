@@ -1,3 +1,5 @@
+//Kriish
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, HelpCircle, Lightbulb, GraduationCap  } from 'lucide-react';
 import FrontPage from '../assets/FrontPage.png';
